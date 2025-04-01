@@ -1,0 +1,200 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+.logo-container {
+  position: absolute;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.logo-container.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rotating-text {
+  font-size: 4rem;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+}
+
+.rotating-text span {
+  opacity: 0;
+  display: inline-block;
+  animation: rotateAndFade 0.3s ease-in-out forwards;
+}
+
+.rotating-text span:nth-child(1) { animation-delay: 0s; }
+.rotating-text span:nth-child(2) { animation-delay: 0.3s; }
+.rotating-text span:nth-child(3) { animation-delay: 0.6s; }
+.rotating-text span:nth-child(4) { animation-delay: 0.9s; }
+.rotating-text span:nth-child(5) { animation-delay: 1.2s; }
+.rotating-text span:nth-child(6) { animation-delay: 1.5s; }
+.rotating-text span:nth-child(7) { animation-delay: 1.8s; }
+.rotating-text span:nth-child(8) { animation-delay: 2.1s; }
+.rotating-text span:nth-child(9) { animation-delay: 2.4s; }
+
+@keyframes rotateAndFade {
+  0% {
+    opacity: 0;
+    transform: rotate(180deg) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.form-logo {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo-text {
+  color: #1e3c72;
+}
+
+.logo-text-colored {
+  color: #2a5298;
+}
+
+.reset-text {
+  text-align: center;
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.login-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 1s ease-in;
+  position: relative;
+}
+
+.login-container h2 {
+  color: #1e3c72;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e1e1e1;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #1e3c72;
+  outline: none;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background: #2a5298;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.forgot-password a {
+  color: #1e3c72;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+img {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}

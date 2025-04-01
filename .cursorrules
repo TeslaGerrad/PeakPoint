@@ -1,0 +1,61 @@
+# Project Rules and Patterns
+
+## Code Style
+1. React Components
+   - Use functional components with hooks
+   - Co-locate CSS files with components
+   - Use PascalCase for component names
+   - Use camelCase for functions and variables
+
+2. File Structure
+   - Components in src/components/[ComponentName]/
+   - Assets in src/assets/
+   - Styles co-located with components
+
+3. CSS Naming
+   - Use kebab-case for class names
+   - Component-specific classes
+   - BEM-like naming convention
+
+## Implementation Patterns
+1. Authentication
+   - State lifting for auth status
+   - Form validation in components
+   - Error handling with user feedback
+   - Loading state management
+
+2. Animation
+   - CSS transitions for smooth effects
+   - React state for animation triggers
+   - Timing coordination with useEffect
+
+## Project Preferences
+1. Component Organization
+   - Separate logic from presentation
+   - Group related state hooks
+   - Clear prop documentation
+   - Consistent event handler naming
+
+2. State Management
+   - Local state for UI components
+   - Props for shared state
+   - Clear state initialization
+
+3. Error Handling
+   - User-friendly error messages
+   - Consistent error display
+   - Form validation feedback
+
+## Development Workflow
+1. Component Development
+   - Start with structure
+   - Add functionality
+   - Implement styling
+   - Add animations
+   - Error handling
+
+2. Testing Considerations
+   - Component isolation
+   - State management
+   - User interaction
+   - Error scenarios 

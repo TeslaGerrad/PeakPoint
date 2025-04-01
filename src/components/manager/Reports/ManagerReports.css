@@ -1,0 +1,160 @@
+.manager-reports-container {
+  padding: 2rem;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.header-left h1 {
+  color: #1a1a1a;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #666;
+  margin: 0.5rem 0 0 0;
+  font-size: 1rem;
+}
+
+.date-filter {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 20px;
+  background: white;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  background: #f5f5f5;
+}
+
+.filter-btn.active {
+  background: #0066cc;
+  border-color: #0066cc;
+  color: white;
+}
+
+.report-types {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.report-type-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  background: white;
+  color: #666;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.report-type-btn:hover {
+  background: #f5f5f5;
+}
+
+.report-type-btn.active {
+  background: #0066cc;
+  border-color: #0066cc;
+  color: white;
+}
+
+.terminals-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.terminal-summary-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.terminal-header {
+  margin-bottom: 1.5rem;
+}
+
+.terminal-header h3 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 1.2rem;
+}
+
+.terminal-header .location {
+  display: block;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.terminal-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item span {
+  display: block;
+  color: #666;
+  font-size: 0.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.stat-item strong {
+  display: block;
+  color: #1a1a1a;
+  font-size: 1.1rem;
+}
+
+.reports-content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.chart-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.chart-card.large {
+  grid-column: 1 / -1;
+}
+
+.chart-card h3 {
+  margin: 0 0 1.5rem 0;
+  color: #1a1a1a;
+  font-size: 1.1rem;
+}
+
+.chart-wrapper {
+  height: 300px;
+} 

@@ -1,0 +1,165 @@
+.loyalty-container {
+  padding: 24px;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.settings-card, .rewards-card {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.settings-card h3, .rewards-card h3 {
+  margin: 0 0 20px;
+  color: #333;
+}
+
+.settings-form .form-group {
+  margin-bottom: 20px;
+}
+
+.settings-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.settings-form input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.switch-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rewards-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-reward-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-reward-btn:hover {
+  background: #2a5298;
+}
+
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.reward-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: box-shadow 0.3s;
+}
+
+.reward-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reward-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(30, 60, 114, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e3c72;
+}
+
+.reward-info {
+  flex: 1;
+}
+
+.reward-info h4 {
+  margin: 0;
+  color: #333;
+}
+
+.reward-info p {
+  margin: 4px 0 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.points-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: #e3f2fd;
+  color: #1e88e5;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+/* Modal Styles */
+.reward-modal {
+  background: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.reward-form {
+  padding: 20px;
+}
+
+.reward-form .form-group {
+  margin-bottom: 16px;
+}
+
+.reward-form textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  min-height: 80px;
+}
+
+@media (max-width: 1024px) {
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .rewards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .reward-modal {
+    margin: 16px;
+  }
+} 

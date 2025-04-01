@@ -1,0 +1,769 @@
+.pos-list-container {
+  padding: 2rem;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.pos-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.header-left h1 {
+  color: #1a1a1a;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #666;
+  margin: 0.5rem 0 0 0;
+  font-size: 1rem;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.refresh-button,
+.add-pos-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.refresh-button {
+  background: white;
+  border: 1px solid #e1e1e1;
+  color: #666;
+}
+
+.refresh-button:hover {
+  background: #f5f5f5;
+}
+
+.add-pos-button {
+  background: #0066cc;
+  border: none;
+  color: white;
+}
+
+.add-pos-button:hover {
+  background: #0052a3;
+}
+
+.pos-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-box {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background: #f0f7ff;
+  color: #0066cc;
+}
+
+.stat-icon.active {
+  background: #e6f4ea;
+  color: #1e8e3e;
+}
+
+.stat-icon.inactive {
+  background: #fce8e8;
+  color: #d93025;
+}
+
+.stat-info h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.stat-info .stat-value {
+  margin: 0.25rem 0 0 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.pos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.pos-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+}
+
+.pos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.pos-title {
+  flex: 1;
+}
+
+.pos-title h3 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.pos-location {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.status-badge {
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status-badge.active {
+  background: #e6f4ea;
+  color: #1e8e3e;
+}
+
+.status-badge.inactive {
+  background: #feeae9;
+  color: #d93025;
+}
+
+.pos-operator {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.operator-name {
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.last-active {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.pos-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.metric {
+  text-align: center;
+}
+
+.metric-label {
+  display: block;
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.metric-value {
+  display: block;
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.pos-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.btn {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: #0066cc;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: white;
+  color: #0066cc;
+  border: 1px solid #0066cc;
+}
+
+.btn-secondary:hover {
+  background: #f0f7ff;
+}
+
+.pos-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.header-info h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+}
+
+.pos-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pos-status.active {
+  background: #e6f4ea;
+  color: #1e8e3e;
+}
+
+.pos-status.inactive {
+  background: #fce8e8;
+  color: #d93025;
+}
+
+.pos-status:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  color: #666;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.action-button:hover {
+  background: #f5f5f5;
+}
+
+.pos-card-content {
+  margin-bottom: 1.5rem;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: #666;
+}
+
+.info-row i {
+  width: 16px;
+  color: #0066cc;
+}
+
+.pos-card-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 1.5rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat label {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.stat value {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.pos-card-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.view-pos-button,
+.manage-pos-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.view-pos-button {
+  background: #0066cc;
+  border: none;
+  color: white;
+}
+
+.view-pos-button:hover {
+  background: #0052a3;
+}
+
+.manage-pos-button {
+  background: white;
+  border: 1px solid #e1e1e1;
+  color: #666;
+}
+
+.manage-pos-button:hover {
+  background: #f5f5f5;
+  color: #0066cc;
+}
+
+.manage-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 1.5rem;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.pos-details {
+  margin-bottom: 2rem;
+}
+
+.pos-details h3 {
+  margin: 0 0 1rem 0;
+  color: #1a1a1a;
+}
+
+.pos-details p {
+  margin: 0.5rem 0;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cashier-section {
+  margin-bottom: 2rem;
+}
+
+.cashier-section h3 {
+  margin: 0 0 1rem 0;
+  color: #1a1a1a;
+}
+
+.cashier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.cashier-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid #e1e1e1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cashier-card:hover {
+  border-color: #0066cc;
+  background: #f0f7ff;
+}
+
+.cashier-card.active {
+  border-color: #0066cc;
+  background: #f0f7ff;
+}
+
+.cashier-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.cashier-info h4 {
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.cashier-info p {
+  margin: 0.25rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.status-badge.active {
+  background: #e6f4ea;
+  color: #1e8e3e;
+}
+
+.status-badge.inactive {
+  background: #fef7e6;
+  color: #f5a623;
+}
+
+.danger-zone {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e1e1e1;
+}
+
+.danger-zone h3 {
+  margin: 0 0 1rem 0;
+  color: #dc3545;
+}
+
+.deactivate-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.deactivate-button:hover {
+  background: #c82333;
+}
+
+.deactivate-button.activate {
+  background: #28a745;
+}
+
+.deactivate-button.activate:hover {
+  background: #218838;
+}
+
+/* Add Terminal Form Styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e1e1e1;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #0066cc;
+  outline: none;
+}
+
+.status-toggle {
+  display: flex;
+  gap: 1rem;
+}
+
+.status-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 2px solid #e1e1e1;
+  border-radius: 6px;
+  background: white;
+  color: #666;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.status-btn.active {
+  border-color: #0066cc;
+  background: #f0f7ff;
+  color: #0066cc;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.save-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.save-button:hover {
+  background: #0052a3;
+}
+
+.cancel-button {
+  flex: 1;
+  padding: 0.75rem;
+  background: white;
+  border: 1px solid #e1e1e1;
+  border-radius: 6px;
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancel-button:hover {
+  background: #f5f5f5;
+}
+
+/* Update the stat boxes to show accurate counts */
+.stat-box .stat-value {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+/* Add styles for manager selection */
+.selected-manager {
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.manager-preview {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.manager-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0066cc;
+}
+
+.manager-avatar i {
+  font-size: 1.2rem;
+}
+
+.manager-info {
+  flex: 1;
+}
+
+.manager-info h4 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 1rem;
+}
+
+.manager-info p {
+  margin: 0.25rem 0 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Update form group spacing for better visual hierarchy */
+.form-group + .form-group {
+  margin-top: 1.5rem;
+}
+
+/* Style the select dropdowns consistently */
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e1e1e1;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  background-color: white;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
+
+.form-group select:focus {
+  border-color: #0066cc;
+  outline: none;
+}
+
+.form-group select:hover {
+  border-color: #0066cc;
+} 

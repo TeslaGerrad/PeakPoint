@@ -1,0 +1,447 @@
+.stores-container {
+  padding: 24px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.add-store-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-store-btn:hover {
+  background: #2a5298;
+}
+
+.stores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.store-card {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.store-card.main-store {
+  border: 2px solid #1e3c72;
+}
+
+.store-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.store-title h3 {
+  margin: 0;
+  color: #333;
+}
+
+.main-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #1e3c72;
+  margin-top: 4px;
+}
+
+.store-details {
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #666;
+}
+
+.detail-item i {
+  width: 16px;
+  color: #1e3c72;
+}
+
+.store-hours {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.store-hours h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  color: #333;
+}
+
+.hours-preview {
+  margin-bottom: 12px;
+}
+
+.day-hours {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.edit-hours-btn {
+  width: 100%;
+  padding: 8px;
+  background: none;
+  border: 1px solid #1e3c72;
+  border-radius: 4px;
+  color: #1e3c72;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.edit-hours-btn:hover {
+  background: #1e3c72;
+  color: white;
+}
+
+.store-actions {
+  display: flex;
+  gap: 12px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.edit-btn, .delete-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.edit-btn {
+  background: #e3f2fd;
+  color: #1e88e5;
+}
+
+.edit-btn:hover {
+  background: #bbdefb;
+}
+
+.delete-btn {
+  background: #ffebee;
+  color: #f44336;
+}
+
+.delete-btn:hover {
+  background: #ffcdd2;
+}
+
+/* Modal Styles */
+.store-modal, .hours-modal {
+  background: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.hours-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.day-hours-input {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.day-hours-input label {
+  width: 100px;
+  color: #666;
+}
+
+.hours-inputs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.hours-inputs input[type="time"] {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 120px;
+}
+
+.hours-inputs span {
+  color: #666;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+@media (max-width: 768px) {
+  .stores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .store-actions {
+    flex-direction: column;
+  }
+
+  .store-modal, .hours-modal {
+    margin: 16px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .day-hours-input {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .day-hours-input label {
+    width: auto;
+  }
+}
+
+/* Staff section styles */
+.store-staff {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.store-staff h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  color: #333;
+}
+
+.staff-info {
+  margin-bottom: 12px;
+}
+
+.manager-info, .cashiers-info {
+  margin-bottom: 8px;
+}
+
+.manager-info label, .cashiers-info label {
+  color: #666;
+  margin-right: 8px;
+}
+
+.cashiers-info ul {
+  margin: 4px 0 0;
+  padding-left: 20px;
+  color: #666;
+}
+
+.assign-staff-btn {
+  width: 100%;
+  padding: 8px;
+  background: none;
+  border: 1px solid #1e3c72;
+  border-radius: 4px;
+  color: #1e3c72;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.assign-staff-btn:hover {
+  background: #1e3c72;
+  color: white;
+}
+
+/* Staff modal styles */
+.staff-modal {
+  background: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.staff-section {
+  margin-bottom: 24px;
+}
+
+.staff-section h4 {
+  margin: 0 0 12px;
+  color: #333;
+}
+
+.staff-section select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.cashiers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cashier-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cashier-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cashier-info small {
+  font-size: 12px;
+  color: #666;
+}
+
+.assigned-badge {
+  font-size: 12px;
+  padding: 2px 8px;
+  background: #fff3e0;
+  color: #ff9800;
+  border-radius: 12px;
+}
+
+/* Additional Staff Modal Styles */
+.section-description {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.cashier-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.cashier-item:hover {
+  background: #f8f9fa;
+}
+
+.cashier-item.assigned {
+  background: #e3f2fd;
+  border-color: #90caf9;
+}
+
+.cashier-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.cashier-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #1e3c72;
+}
+
+.cashier-item input[type="checkbox"]:disabled {
+  opacity: 0.5;
+}
+
+.cashier-item.disabled {
+  opacity: 0.7;
+  background: #f5f5f5;
+}
+
+.staff-section select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  background-color: white;
+}
+
+.staff-section select:focus {
+  border-color: #1e3c72;
+  outline: none;
+}
+
+.assigned-badge {
+  font-size: 12px;
+  padding: 4px 8px;
+  background: #fff3e0;
+  color: #ff9800;
+  border-radius: 12px;
+  white-space: nowrap;
+} 

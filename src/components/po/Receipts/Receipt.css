@@ -1,0 +1,113 @@
+.receipt {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 380px;
+  margin: 0 auto;
+  font-family: 'Courier New', monospace;
+}
+
+.receipt-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed #ddd;
+}
+
+.receipt-logo {
+  width: 120px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.receipt-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.store-info {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.receipt-details {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #ddd;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.receipt-items {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #ddd;
+}
+
+.receipt-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.item-details {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.item-name {
+  font-weight: 500;
+}
+
+.item-qty {
+  color: #666;
+}
+
+.receipt-summary {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #ddd;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.summary-row.total {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #ddd;
+}
+
+.receipt-footer {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.receipt-barcode {
+  margin-top: 1rem;
+  font-family: 'Libre Barcode 39', cursive;
+  font-size: 2rem;
+  letter-spacing: -1px;
+}
+
+.payment {
+  margin-top: 0.5rem;
+  font-style: italic;
+} 
